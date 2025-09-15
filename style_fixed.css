@@ -780,7 +780,14 @@ table {
 #section_24,
 #section_25,
 #section_26,
-#section_27 {
+#section_27,
+#section_28,
+#section_29,
+#section_30,
+#section_31,
+#section_32,
+#section_33,
+#section_34 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -1622,4 +1629,93 @@ img[alt="kowal"] {
   display: block;
   margin: 6px auto 6px;
   filter: drop-shadow(0 14px 24px rgba(0,0,0,.8));
+}
+
+
+.inv-window.inv--sm{
+  max-width: 420px;      /* mniejsze okno */
+  margin: 15px auto;
+  padding: 6px;
+  background:#111;
+  border:1px solid #4a3d2a;
+  box-shadow: inset 0 0 0 1px #2c251d, 0 4px 12px rgba(0,0,0,.6);
+  border-radius:5px;
+  color:#ddd;
+}
+
+/* siatka slotów – 6 w wierszu, mniejsze */
+.inv-slots{
+  display:grid;
+  grid-template-columns: repeat(6, minmax(48px,1fr));
+  gap:6px;
+  margin-bottom:8px;
+}
+.inv-slot{
+  position:relative;
+  aspect-ratio:1/1;
+  background:#0e0e0e;
+  border-radius:4px;
+  box-shadow:0 0 0 1px #2b251f inset,
+             0 0 0 2px #5c4a32 inset,
+             0 3px 6px rgba(0,0,0,.5);
+}
+.inv-slot img{
+  position:absolute; inset:4px;
+  width:calc(100% - 22px); height:calc(100% - 22px);
+  object-fit:contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.6));
+}
+.inv-count{
+  position:absolute; right:4px; bottom:2px;
+  font-size:9px; font-weight:700; color:#fff;
+  text-shadow:0 0 2px #000, 0 0 3px #000;
+}
+
+  /* Tooltip (panel z bonusami) */
+  .inv-tip{
+    position:absolute; left:50%; bottom:calc(100% + 8px);
+    transform:translateX(-50%) translateY(6px);
+    opacity:0; pointer-events:none; transition:opacity .15s ease, transform .15s ease;
+    min-width: 180px; max-width: 240px; padding:10px 12px; z-index:5;
+    background: rgba(17,17,17,.96);
+    border:1px solid #6c5c46; border-radius:8px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.6), inset 0 0 0 1px #2b251f;
+    color:#e6e6e6; text-shadow:0 0 4px rgba(0,0,0,.7); font-size:13px;
+  }
+  .inv-tip::after{
+    content:""; position:absolute; left:50%; top:100%; transform:translateX(-50%);
+    border:8px solid transparent; border-top-color:#6c5c46; filter:drop-shadow(0 2px 0 rgba(0,0,0,.35));
+  }
+  .inv-tip h4{
+    margin:0 0 6px; font-size:14px; color:#E6C200;
+    text-shadow:0 0 6px rgba(230,194,0,.4);
+  }
+  .inv-tip ul{ margin:0; padding-left:16px; }
+  .inv-tip li{ margin:2px 0; }
+
+  .inv-slot:hover .inv-tip{
+    opacity:1; transform:translateX(-50%) translateY(0);
+  }
+
+  /* Stopka z Yang */
+  .inv-mini-footer{ display:flex; justify-content:flex-end; }
+  .inv-mini-yang{
+    display:flex; align-items:center; gap:6px; padding:4px 8px;
+    background: rgba(0,0,0,.35); border:1px solid #5e4d39; border-radius:4px;
+    font-weight:700; color:#e6c200; text-shadow:0 0 6px #000;
+  }
+  .inv-mini-yang img{ width:18px; height:18px; object-fit:contain; }
+
+  /* responsywnie: jeśli mało miejsca, spadnie do 3 kolumn */
+  @media (max-width:560px){
+    .inv-slots{ grid-template-columns: repeat(3, minmax(72px,1fr)); }
+  }
+
+
+.paragraf{
+  color:#E6E6E6;
+  line-height:1.7;
+  font-size:15px;
+  text-shadow:0 0 6px rgba(0,0,0,.75);
+  margin: 10px auto;
 }
