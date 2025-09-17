@@ -2331,3 +2331,11 @@ img[alt="kowal"] {
   visibility: visible;
   transform: translateX(-50%) translateY(-4px);
 }
+
+.dungeon-info img{
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  padding-left: 3px;
+  padding-right: 3px;
+}
