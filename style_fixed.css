@@ -433,6 +433,7 @@ body.scroll_block {
     margin: auto;
 }
 
+
 .main__photo {
     box-shadow: 0px 0px 130px 9px rgb(2, 1, 1);
     display: flex;
@@ -440,7 +441,7 @@ body.scroll_block {
     align-items: flex-end;
     justify-content: center;
     background-size: cover;
-    width: min(534px, 27.84vw); /* Scale with viewport, minimum 534px */
+    width: min(536px, 27.84vw); 
     height: 100vh;
     padding: 40px 100px;
     position: sticky;
@@ -449,10 +450,11 @@ body.scroll_block {
     flex-shrink: 0;
 }
 
+
 .main__photo--background {
     object-fit: cover;
     display: block;
-    width: min(540px, 27.84vw); /* Scale with viewport, minimum 534px */
+    width: min(580px, 31vw); 
     max-height: 100%;
     position: fixed;
     right: 0;
@@ -514,22 +516,9 @@ body.scroll_block {
     }
 }
 
+
+
 @media screen and (max-width: 1200px) {
-    .main__menu {
-        align-items: center;
-        min-width: 20%;
-        max-width: 20%;
-		margin-top: -100px;
-    }
-
-    .main__content {
-        min-width: 60%;
-        max-width: 60%;
-    }
-
-}
-
-@media screen and (max-width: 980px) {
     #mobile {
         display: flex;
     }
@@ -787,7 +776,9 @@ table {
 #section_31,
 #section_32,
 #section_33,
-#section_34 {
+#section_34,
+#section_35,
+#section_36 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -838,8 +829,8 @@ body::before {
 .jinno img,
 .chunjo img,
 .shinsoo img {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   vertical-align: middle;
   margin-right: 4px;
 }
@@ -1279,7 +1270,7 @@ table.rangi {
   max-width: 920px;
   margin: 18px auto;
   border-collapse: separate;
-  border-spacing: 0 12px;              /* przerwy między wierszami */
+  border-spacing: 0 12px;              
   font-size: 15px;
   color:#e6e6e6;
   text-align:center;
@@ -1287,7 +1278,7 @@ table.rangi {
 }
 
 .bonusy-um thead th{
-  background:#2a2118;                  /* ciemny brąz jak na screenie */
+  background:#2a2118;                  
   border:1px solid #644f36;
   border-bottom-color:#8a6a45;
   padding:10px 8px;
@@ -1381,12 +1372,12 @@ table.rangi {
 }
 
 .boss-info li strong {
-  color: #E6C200; /* złoty akcent na etykietach */
+  color: #E6C200; 
   font-weight: bold;
 }
 
 .boss-info li span {
-  color: #A9D2FF; /* jasny niebieski dla godzin / dodatkowych info */
+  color: #A9D2FF; 
   font-style: italic;
 }
 
@@ -1436,7 +1427,7 @@ table.rangi {
 }
 
 .farm-desc span {
-  color: #A9D2FF;  /* jasny niebieski akcent dla liczby kont */
+  color: #A9D2FF;  
   font-weight: bold;
 }
 
@@ -1449,11 +1440,11 @@ table.rangi {
   color: #E6E6E6;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
   font-style: italic;
-  border-left: 3px solid rgba(230,194,0,0.6); /* złoty akcent */
+  border-left: 3px solid rgba(230,194,0,0.6); 
   padding-left: 14px;
 }
 .info-text strong {
-  color: #E6C200; /* wyróżnienia złotym */
+  color: #E6C200; 
 }
 
 .req-title {
@@ -1521,7 +1512,7 @@ table.rangi {
 }
 
 .guild-req li strong {
-  color: #E6C200; /* złoty akcent */
+  color: #E6C200; 
   font-weight: bold;
 }
 
@@ -1549,10 +1540,10 @@ table.rangi {
 
 
 .exchange-table img {
-  width: 34px;         /* dostosuj wielkość ikonek */
+  width: 34px;         
   height: 34px;
   vertical-align: middle; 
-  margin-left: 6px;    /* odstęp od tekstu */
+  margin-left: 6px;    
   margin-right: 6px;
 }
 
@@ -1602,7 +1593,7 @@ table.rangi {
   filter: drop-shadow(0 0 10px rgba(230,194,0,.45));
 }
 
-/* Lista „Doskonalenie ekwipunku” – lekki, czytelny styl */
+
 #section_22 ul{
   list-style:none;
   padding:0;
@@ -1705,7 +1696,7 @@ img[alt="kowal"] {
   }
   .inv-mini-yang img{ width:18px; height:18px; object-fit:contain; }
 
-  /* responsywnie: jeśli mało miejsca, spadnie do 3 kolumn */
+  
 
 
 .paragraf{
@@ -1723,7 +1714,7 @@ img[alt="kowal"] {
   max-width: 980px;
   margin: 16px auto 28px;
   border-collapse: separate;
-  border-spacing: 0 10px; /* przerwy między wierszami (cardy) */
+  border-spacing: 0 10px; 
   font-size: 15px;
   color: #E6E6E6;
 }
@@ -1804,16 +1795,16 @@ img[alt="kowal"] {
   filter: drop-shadow(0 0 6px rgba(0,0,0,.6));
 }
 
-/* Hover – delikatny złoty błysk */
+
 .biolog tbody tr:hover td{
   border-color: rgba(230,194,0,0.22);
   box-shadow: inset 0 0 0 1px rgba(230,194,0,0.12);
 }
 
-/* MOBILE – układ kafelkowy, czytelny i zwarty */
+
 @media (max-width: 720px) {
   .biolog {
-    border-spacing: 0;          /* bez dziur między wierszami */
+    border-spacing: 0;          
   }
   .biolog thead { display: none; }
 
@@ -1830,13 +1821,13 @@ img[alt="kowal"] {
   .biolog tbody td {
     display: block;
     width: 100%;
-    border: 0 !important;       /* zero obwódek między „sekcjami” karty */
+    border: 0 !important;      
     background: transparent;
     padding: 8px 0 6px;
     vertical-align: top;
   }
 
-  /* Etykiety kolumn */
+
   .biolog tbody td::before {
     display: block;
     margin-bottom: 6px;
@@ -1851,7 +1842,7 @@ img[alt="kowal"] {
   .biolog tbody td:nth-child(3)::before { content: "Oddawane przedmioty"; }
   .biolog tbody td:nth-child(4)::before { content: "Nagroda"; }
 
-  /* Poziom – większy akcent, ale bez stałej szerokości */
+
   .biolog .lvl {
     width: auto;
     text-align: left;
@@ -1860,7 +1851,7 @@ img[alt="kowal"] {
     color: #E6C200;
   }
 
-  /* Stosy pigułek: pionowo, do lewej, równe odstępy */
+
   .biolog .items,
   .biolog .reward {
     display: flex;
@@ -1870,7 +1861,7 @@ img[alt="kowal"] {
     margin: 0;
   }
 
-  /* Pigułki i ikony – mniejsze na telefonie */
+
   .biolog .itm,
   .biolog .chest,
   .biolog .bonus {
@@ -1884,7 +1875,7 @@ img[alt="kowal"] {
   }
 }
 
-/* jeszcze ciaśniej na małych ekranach */
+
 @media (max-width: 420px) {
   .biolog tbody tr { padding: 10px 10px 6px; }
   .biolog .itm,
@@ -1894,14 +1885,14 @@ img[alt="kowal"] {
 }
 
 
-/* panel wyboru w kolumnie Nagroda */
+
 .biolog .reward .choice{
   background: rgba(0,0,0,.22);
   border: 1px solid rgba(230,194,0,.18);
   border-radius: 10px;
   padding: 10px 12px;
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.03);
-  max-width: 520px; /* możesz zdjąć, jeśli chcesz pełną szerokość */
+  max-width: 520px; 
 }
 
 .biolog .reward .choice-title{
@@ -1920,7 +1911,7 @@ img[alt="kowal"] {
   font-size: .9em;
 }
 
-/* lista bonusów z „biżuteryjnym” puntem */
+
 .biolog .reward .choice-list{
   list-style: none;
   margin: 0;
@@ -1942,7 +1933,7 @@ img[alt="kowal"] {
   box-shadow: 0 0 6px rgba(230,194,0,.55);
 }
 
-/* spójność z mobile – nic nie trzeba zmieniać, panel skaluje się sam */
+
 @media (max-width:720px){
   .biolog .reward .choice{ padding: 9px 10px; }
 }
@@ -1953,4 +1944,80 @@ img[alt="kowal"] {
   color:#ffdca0;                      
   text-shadow:0 0 6px rgba(0,0,0,.8);
   line-height:1.6;
+}
+
+
+.sidebar {
+  border-collapse: collapse;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.sidebar td {
+  padding: 6px 12px;
+  vertical-align: middle; 
+}
+
+.sidebar img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.sidebar td:last-child {
+  font-family: 'Flora', serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow: 0 0 6px rgba(0,0,0,.8);
+  white-space: nowrap;
+}
+
+
+.optymalizacja-en strong {
+  color: #e6c200;
+  font-weight: 700;
+}
+
+
+#section_36 {
+  background: rgba(255,255,255,0.03); 
+  border: 1px solid rgba(230,194,0,0.25); 
+  border-radius: 12px;
+  padding: 30px 28px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5),
+              inset 0 0 12px rgba(230,194,0,0.08);
+}
+
+
+.faq-item {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed rgba(230,194,0,0.25);
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+
+.faq-question {
+  font-family: 'Lora', serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #E6C200;
+  margin-bottom: 8px;
+  text-shadow: 0 0 6px rgba(0,0,0,.9), 0 0 8px rgba(230,194,0,.4);
+  position: relative;
+  padding-left: 24px;
+}
+
+.faq-answer {
+  color: #E6E6E6;
+  font-size: 15px;
+  line-height: 1.7;
+  text-shadow: 0 0 4px rgba(0,0,0,.7);
+  margin: 0;
+  padding-left: 4px;
 }
