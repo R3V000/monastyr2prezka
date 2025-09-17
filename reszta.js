@@ -174,6 +174,7 @@
 
   ];
 
+  /*
   const container = document.getElementById("inventory");
 
   items.forEach((it) => {
@@ -191,3 +192,63 @@
     `;
     container.appendChild(slot);
   });
+
+
+*/
+
+const container = document.getElementById("inventory");
+
+const blocks = [
+  { title: "Kamień Duszy Wojownika +5",                items: items.slice(0, 6) },
+  { title: "Kamień Duszy Ninji +5",  items: items.slice(6, 12) },
+  { title: "Kamień Duszy Sury +5",        items: items.slice(12, 18) },
+  { title: "Kamień Duszy Szamana +5",            items: items.slice(18, 24) },
+  { title: "Kamień Duszy Potwora +5",         items: items.slice(24, 30) },
+  { title: "Kamień Duszy Uchylenia +5",            items: items.slice(30, 36) },
+  { title: "Kamień Duszy Uniku +5",            items: items.slice(36, 42) },
+  { title: "Kamień Duszy Magii +5",            items: items.slice(42, 48) },
+  { title: "Kamień Duszy Powtórki +5",            items: items.slice(48, 54) },
+  { title: "Kamień Duszy Śmierci +5",            items: items.slice(60, 66) },
+  { title: "Kamień Duszy Penetracji +5",            items: items.slice(66, 72) },
+  { title: "Kamień Duszy Obrony +5",            items: items.slice(72, 78) },
+  { title: "Kamień Duszy Przyśpieszenia +5",            items: items.slice(78, 84) }
+];
+
+
+
+renderInventory(container, blocks);
+
+
+
+function makeSlot(it){
+  const slot = document.createElement("div");
+  slot.className = "inv-slot";
+  slot.innerHTML = `
+    <img src="${it.img}" alt="">
+    <span class="inv-count">${it.count ?? ""}</span>
+    ${it.bonuses ? `
+      <div class="inv-tip">
+        <h4>${it.name ?? "Przedmiot"}</h4>
+        <ul>${it.bonuses.map(b => `<li>${b}</li>`).join("")}</ul>
+      </div>` : ""
+    }
+  `;
+  return slot;
+}
+
+
+function addHeading(container, text){
+  const h = document.createElement("div");
+  h.className = "inv-heading";
+  h.textContent = text;
+  container.appendChild(h);
+}
+
+
+function renderInventory(container, blocks){
+  container.innerHTML = "";
+  blocks.forEach(block => {
+    addHeading(container, block.title);
+    block.items.forEach(it => container.appendChild(makeSlot(it)));
+  });
+}
