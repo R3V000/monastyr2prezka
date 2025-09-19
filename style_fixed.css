@@ -2339,3 +2339,52 @@ img[alt="kowal"] {
   padding-left: 3px;
   padding-right: 3px;
 }
+
+.crafting-przetop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px auto;
+  font-size: 18px;
+  color: #E6C200;
+}
+
+.crafting-przetop img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.7));
+  border: 1px solid rgba(230,194,0,0.3);
+  border-radius: 8px;
+  padding: 4px;
+  background: rgba(0,0,0,0.4);
+}
+
+.arrow {
+  font-size: 40px;
+  color: #E6C200;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+}
+
+.materials {
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.material,
+.wytwarzanie.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+}
+
+.material img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.6));
+  margin-bottom: 5px;
+}
