@@ -30,6 +30,39 @@
 
   };
 
+    const przetopImages = [
+    "https://img.m2icondb.com/50628.png", 
+    "https://img.m2icondb.com/50629.png", 
+    "https://img.m2icondb.com/50630.png", 
+    "https://img.m2icondb.com/50631.png",
+    "https://img.m2icondb.com/50627.png", 
+    "https://img.m2icondb.com/50626.png", 
+    "https://img.m2icondb.com/50625.png", 
+    "https://img.m2icondb.com/50624.png",
+    "https://img.m2icondb.com/50623.png", 
+    "https://img.m2icondb.com/50621.png", 
+    "https://img.m2icondb.com/50632.png", 
+    "https://img.m2icondb.com/50633.png",
+    "https://img.m2icondb.com/50634.png"
+  ];
+
+  const craftImages = [
+    "https://img.m2icondb.com/50608.png",
+    "https://img.m2icondb.com/50609.png",
+    "https://img.m2icondb.com/50610.png",
+    "https://img.m2icondb.com/50611.png",
+    "https://img.m2icondb.com/50607.png",
+    "https://img.m2icondb.com/50606.png",
+    "https://img.m2icondb.com/50605.png",
+    "https://img.m2icondb.com/50604.png",
+    "https://img.m2icondb.com/50603.png",
+    "https://img.m2icondb.com/50601.png",
+    "https://img.m2icondb.com/50612.png",
+    "https://img.m2icondb.com/50613.png",
+    "https://img.m2icondb.com/50614.png"
+  ];
+
+
   const items = [
     {
       img: ICONS.kdwoj, count: 1,
@@ -252,3 +285,22 @@ function renderInventory(container, blocks){
     block.items.forEach(it => container.appendChild(makeSlot(it)));
   });
 }
+
+
+
+
+let indexPrzetop = 0;
+let indexCraft = 0;
+
+const przetopImg = document.getElementById("przetopImg");
+const craftImg = document.getElementById("craftImg");
+
+setInterval(() => {
+  // przetop
+  indexPrzetop = (indexPrzetop + 1) % przetopImages.length;
+  przetopImg.src = przetopImages[indexPrzetop];
+
+  // wytwarzanie
+  indexCraft = (indexCraft + 1) % craftImages.length;
+  craftImg.src = craftImages[indexCraft];
+}, 1000);
