@@ -502,7 +502,7 @@ body.scroll_block {
 }
 
 
-
+/*
 @media screen and (max-width: 1700px) {
     .main__menu {
         padding: 0 40px 0 0;
@@ -514,11 +514,11 @@ body.scroll_block {
     .main__menu {
         padding: 0 35px 0 0;
     }
-}
+}*/
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1340px) {
     #mobile {
         display: flex;
     }
@@ -853,9 +853,19 @@ body::before {
   line-height: 1.6;
 }
 
-#section_9 p {
-    font-size: 16px;
-    color: #fff;
+
+
+.new-title::before,
+.new-title::after{
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(230,194,0,.6));
+  margin: 0 -35px; /* linia wejdzie bardziej pod obrazek */
+}
+
+.new-title::after{
+  transform: scaleX(-1);
 }
 
 /* ornamenty */
@@ -886,9 +896,8 @@ h1::after {
 table.rangi {
   width: 100%;
   border-collapse: separate;   
-  border-spacing: 0 8px;       
+  border-spacing: 0 0px;       
   margin: 12px auto 28px;
-  table-layout: fixed;
   font-family: 'Lora', serif;
   color: #DDD;
   font-size: 15px;
@@ -896,14 +905,12 @@ table.rangi {
 
 
 .rangi thead th {
-  background: linear-gradient(to bottom, rgba(230,194,0,.18), rgba(230,194,0,.05));
+  background: rgba(230,194,0,0.15);
   color: #E6C200;
-  border: 1px solid rgba(230,194,0,.25);
-  border-bottom: 1px solid rgba(230,194,0,.35);
-  padding: 10px 12px;
-  text-align: left;
-  text-shadow: 0 1px 0 rgba(0,0,0,.7);
-  font-weight: 700;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
 
@@ -917,24 +924,6 @@ table.rangi {
   border-left: 1px solid rgba(255,255,255,0.06);
   border-right: 1px solid rgba(255,255,255,0.06);
 }
-.rangi tbody tr:first-child td { border-top: 1px solid rgba(255,255,255,0.06); }
-.rangi tbody tr:last-child  td { border-bottom: 1px solid rgba(255,255,255,0.06); }
-.rangi tbody tr:first-child td:first-child { border-top-left-radius: 10px; }
-.rangi tbody tr:first-child td:last-child  { border-top-right-radius: 10px; }
-.rangi tbody tr:last-child  td:first-child { border-bottom-left-radius: 10px; }
-.rangi tbody tr:last-child  td:last-child  { border-bottom-right-radius: 10px; }
-
-
-.rangi colgroup col:nth-child(1) { width: 28%; }
-.rangi colgroup col:nth-child(2) { width: 18%; }
-.rangi colgroup col:nth-child(3) { width: auto; }
-
-.rangi td:first-child {
-  font-variant-numeric: tabular-nums; 
-  color: #E7E7E7;
-}
-.rangi td:nth-child(2) { color: #ddd; font-weight: 600; }
-
 
 .rank--krwawy { color: #fc2f2f; text-shadow: 0 0 6px rgba(252, 6, 6, 0.6); }
 .rank--wladca { color: #FFA64D; text-shadow: 0 0 6px rgba(255,165,0,.5); }
@@ -980,10 +969,10 @@ table.rangi {
 #section_10 .cor-list{
   display: inline-flex;
   align-items: center;
-  font-weight: 700; 
+
   font-size: 14px;  
   color: #FFF;      
-  text-shadow: 0 0 6px rgba(0,0,0,0.9), 0 0 8px rgba(255,255,255,0.4);
+
 }
 
 #section_10 .odmiany {
@@ -1007,9 +996,10 @@ table.rangi {
   text-shadow: 0 0 6px rgba(0,0,0,.8);
 }
 
+
 .bonus-alchemii tr {
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 }
 
 .bonus-alchemii {
@@ -1065,14 +1055,6 @@ table.rangi {
   max-width: 900px;
 }
 
-/* Akapity */
-#section_12 p {
-  font-size: 16px;
-  color: #DDD;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
 /* Nagłówki */
 #section_12 h1 {
   font-family: 'Cinzel Decorative', serif;
@@ -1088,13 +1070,11 @@ table.rangi {
   list-style: none;
   padding: 0;
   margin: 0 auto 30px;
-  max-width: 700px;
 }
 
 /* Punkty listy */
 #section_12 ul li {
   margin: 10px 0;
-  padding-left: 24px;
   position: relative;
   color: #E6E6E6;
   font-size: 15px;
@@ -1102,7 +1082,7 @@ table.rangi {
   text-shadow: 0 0 4px rgba(0,0,0,0.6);
 }
 
-/* Ozdobna ikona przed każdym punktem */
+/* Ozdobna ikona przed każdym punktem 
 #section_12 ul li::before {
   content: "➤"; 
   position: absolute;
@@ -1110,7 +1090,7 @@ table.rangi {
   color: #E6C200; 
   font-size: 14px;
   text-shadow: 0 0 6px rgba(230,194,0,0.7);
-}
+}*/
 
 
 .warning {
@@ -1170,7 +1150,7 @@ table.rangi {
   font-size: 16px;
   color: #E6E6E6;
   text-shadow: 0 0 4px rgba(0,0,0,0.6);
-  font-weight: bold;
+
   line-height: 1.6;
 }
 
@@ -1202,7 +1182,7 @@ table.rangi {
 .czytanie thead th {
   background: rgba(230,194,0,0.15);
   color: #E6C200;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Lora';
   font-size: 16px;
   padding: 12px 8px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -1439,7 +1419,6 @@ table.rangi {
   text-align: justify;
   color: #E6E6E6;
   text-shadow: 0 0 6px rgba(0,0,0,0.8);
-  font-style: italic;
   border-left: 3px solid rgba(230,194,0,0.6); 
   padding-left: 14px;
 }
@@ -1501,8 +1480,8 @@ table.rangi {
   margin: 20px auto;
   max-width: 500px;
   text-align: center;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 13px;
+  line-height: 1.5;
   color: #E6E6E6;
 }
 
@@ -1555,7 +1534,7 @@ table.rangi {
   margin: 0 auto;
 }
 
-/* Podtytuły: CRAFTING / DOSKONALENIE… */
+/* Podtytuły: CRAFTING / DOSKONALENIE… 
 #section_22 .req-title{
   font-family:'Cinzel Decorative', serif;
   color:#E6C200;
@@ -1564,19 +1543,14 @@ table.rangi {
   margin: 14px 0 10px;
   text-transform: uppercase;
   text-shadow: 0 0 8px rgba(0,0,0,.85), 0 0 10px rgba(230,194,0,.45);
-}
+}*/
 
 /* Akapity w sekcji */
-#section_22 p{
-  color:#E6E6E6;
-  line-height:1.7;
-  font-size:15px;
-  text-shadow:0 0 6px rgba(0,0,0,.75);
-  margin: 10px auto;
-}
+
 
 /* Pasek z ikonkami broni 75lvl */
 #section_22 .itemy75{
+  margin: 25px auto;
   display:flex;
   gap: 5px;
   justify-content:center;
@@ -1599,22 +1573,18 @@ table.rangi {
   padding:0;
   margin: 8px auto 0;
   max-width: 760px;
-  text-align: left;
+  text-align: center;
 }
 #section_22 ul li{
   position:relative;
   padding: 6px 10px 6px 22px;
   margin: 4px 0;
-  color:#E6E6E6;
+  font-size: 13px;
+  color:#DDD;
+  line-height: 1.6;
   text-shadow:0 0 5px rgba(0,0,0,.7);
 }
-#section_22 ul li::before{
-  content:"➤";
-  position:absolute; left:0; top:0.2em;
-  color:#E6C200;
-  text-shadow:0 0 8px rgba(230,194,0,.6);
-  font-size:13px;
-}
+
 
 img[alt="kowal"] {
   display: block;
@@ -1713,16 +1683,23 @@ img[alt="kowal"] {
 
 
 .paragraf{
-  color:#E6E6E6;
-  line-height:1.7;
-  font-size:15px;
-  text-shadow:0 0 6px rgba(0,0,0,.75);
+  max-width: 700px;
   margin: 10px auto;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: center;
+  color: #E6E6E6;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7);
 }
 
-.paragraf strong{
-  color: #e6c200;
-  font-weight: 700;
+.paragraf strong {
+  color: #E6C200;
+  font-weight: bold;
+}
+
+.paragraf span {
+  color: #A9D2FF;  
+  font-weight: bold;
 }
 
 
@@ -2240,9 +2217,11 @@ img[alt="kowal"] {
 .drop-table th {
   background: rgba(230,194,0,0.12);
   color: #E6C200;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Lora';
+  text-transform: uppercase;
   padding: 10px;
   border: 1px solid rgba(230,194,0,.3);
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
 }
 
 .drop-table td {
@@ -2253,8 +2232,6 @@ img[alt="kowal"] {
 }
 
 .drop-table img {
-  width: 22px;
-  height: 22px;
   vertical-align: middle;
   margin-right: 6px;
   filter: drop-shadow(0 0 4px rgba(0,0,0,.6));
@@ -2388,3 +2365,34 @@ img[alt="kowal"] {
   filter: drop-shadow(0 0 6px rgba(0,0,0,0.6));
   margin-bottom: 5px;
 }
+
+
+.obok {
+  display: flex;       /* ustawia boxy obok siebie */
+  gap: 40px;           /* odstęp między nimi */
+  justify-content: center; /* wyśrodkowanie całości */
+  align-items: flex-start; /* wyrównanie do góry */
+}
+
+.box {
+  display: flex;
+  flex-direction: column; /* nagłówek nad obrazkiem */
+  align-items: center;    /* wyśrodkowanie w pionie */
+  text-align: center;
+}
+
+.req-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #FFD26A;  /* złoty jak w tabeli */
+}
+
+
+.kamienie {
+  display: grid;
+  grid-template-columns: repeat(2, auto); 
+  gap: 5px; 
+  justify-content: flex-middle; 
+}
+
+
