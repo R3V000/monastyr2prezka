@@ -2215,13 +2215,10 @@ img[alt="kowal"] {
 }
 
 .drop-table th {
-  background: rgba(230,194,0,0.12);
-  color: #E6C200;
-  font-family: 'Lora';
-  text-transform: uppercase;
+  background: rgba(255,255,255,0.03);
   padding: 10px;
-  border: 1px solid rgba(230,194,0,.3);
-  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,255,255,0.08);
+  vertical-align: middle;
 }
 
 .drop-table td {
