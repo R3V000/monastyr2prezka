@@ -2100,6 +2100,28 @@ a {
 
 
 
+.video-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 576px; /* szerokość dopasowana do ramki */
+  height: 290px; /* wysokość dopasowana do ramki */
+}
+
+.video-wrapper video {
+  width: 90%;
+  height: 90%;
+  display: block;
+
+}
+
+.video-wrapper .frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;   /* ramka nachodzi dokładnie na film */
+  height: 100%;
+  pointer-events: none; /* żeby kliknięcia przechodziły do odtwarzacza */
+}
 
 
 
