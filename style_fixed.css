@@ -788,7 +788,8 @@ table {
 #section_33,
 #section_34,
 #section_35,
-#section_36 {
+#section_36,
+#section_37 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -1280,12 +1281,12 @@ h1::after {
 
 p strong{
   color: #E6C200;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 p span{
   color: #A9D2FF;  
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .paragraf{
