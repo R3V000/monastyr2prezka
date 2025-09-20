@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Lora&display=swap');
 
 
+:root{
+  --bg:#1b130d;
+  --panel:#23180f;
+  --gold:#e6c200;
+  --gold-soft:rgba(230,194,0,.25);
+  --text:#e7dfcf;
+  --muted:#cdbfa5;
+  --line:rgba(230,194,0,.35);
+}
+
 h1, h2, h3 {
   font-family: 'Cinzel Decorative', serif;
   color: #E6C200; 
@@ -853,22 +863,19 @@ body::before {
   line-height: 1.6;
 }
 
-
-
 .new-title::before,
 .new-title::after{
   content: "";
   flex: 1;
   height: 1px;
   background: linear-gradient(to right, transparent, rgba(230,194,0,.6));
-  margin: 0 -35px; /* linia wejdzie bardziej pod obrazek */
+  margin: 0 -35px; 
 }
 
 .new-title::after{
   transform: scaleX(-1);
 }
 
-/* ornamenty */
 h1 {
   display: flex;
   align-items: center;
@@ -892,51 +899,8 @@ h1::after {
   transform: scaleX(-1);
 }
 
-/* Tabela rang */
-table.rangi {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  font-size: 15px;
-  color: #E6E6E6;
-  text-shadow: 0 0 5px rgba(0,0,0,.6);
-}
-
-
-.rangi thead th {
-
-  color: #E6C200;
-  padding: 10px;
-  vertical-align: middle;
-}
-
-
-.rangi tbody td {
-  padding: 10px;
-  vertical-align: middle;
-}
-
 .rank--krwawy { color: #fc2f2f; text-shadow: 0 0 6px rgba(252, 6, 6, 0.6); }
 .rank--wladca { color: #FFA64D; text-shadow: 0 0 6px rgba(255,165,0,.5); }
-
-
-
-
-
-@media (max-width: 720px) {
-  .rangi thead { display: none; }
-  .rangi, .rangi tbody, .rangi tr, .rangi td { display: block; width: 100%; }
-  .rangi tbody tr { margin: 10px 0; }
-  .rangi tbody td { border: 0; padding: 8px 12px; }
-  .rangi tbody td::before {
-    content: attr(data-label);
-    display: block;
-    color: #E6C200;
-    font-weight: 700;
-    margin-bottom: 2px;
-  }
-}
 
 .pozytywne {
   color: #FFD34D; 
@@ -950,106 +914,6 @@ table.rangi {
   font-weight: 600;
 }
 
-
-
-#section_10 .cor-list{
-  display: inline-flex;
-  align-items: center;
-
-  font-size: 14px;  
-  color: #FFF;      
-
-}
-
-#section_10 .odmiany {
-    font-size: 18px;
-    font-weight: bold;
-    color: #EEE; 
-    text-shadow: 
-        0 0 6px rgba(0,0,0,0.9),   
-        0 0 12px rgba(255,255,255,0.4), 
-        0 2px 2px rgba(0,0,0,0.7); 
-    letter-spacing: 1px; 
-    text-align: center;
-    margin-bottom: -5px;
-}
-
-.bonus-alchemii td p {
-  font-family: 'Cinzel Decorative', serif;
-  font-size: 16px;
-  font-weight: bold;
-  color: #E6E6E6;
-  text-shadow: 0 0 6px rgba(0,0,0,.8);
-}
-
-
-.bonus-alchemii tr {
-  display: block;
-  margin-bottom: 25px;
-}
-
-.bonus-alchemii {
-    margin-top: 50px;
-}
-
-
-@media (max-width: 768px) {
-  .bonus-alchemii,
-  .bonus-alchemii tbody,
-  .bonus-alchemii tr,
-  .bonus-alchemii td {
-    display: block;      
-    width: 100% !important;
-  }
-
-  .bonus-alchemii tr {
-    margin-bottom: 40px; 
-  }
-
-  .bonus-alchemii td {
-    margin-bottom: 20px;
-    box-sizing: border-box;
-  }
-}
-
-#section_11 .bonus{
-    color: green;
-}
-
-.warning {
-  font-family: 'Lora', serif;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ff4444;
-  text-align: center;
-  text-transform: uppercase;
-  margin: 20px auto;
-  padding: 12px 18px;
-  border: 2px solid #ff4444;
-  border-radius: 10px;
-  background: rgba(255, 0, 0, 0.05); /* lekka poświata tła */
-  text-shadow: 0 0 6px rgba(0,0,0,0.8), 0 0 10px rgba(255,0,0,0.5);
-  box-shadow: 0 0 14px rgba(255,0,0,0.2) inset;
-  max-width: 800px;
-}
-
-
-/* Sekcja jeździectwo */
-#section_12 {
-  text-align: center;
-  margin: 40px auto;
-  max-width: 900px;
-}
-
-/* Nagłówki */
-#section_12 h1 {
-  font-family: 'Cinzel Decorative', serif;
-  color: #E6C200; /* złoty */
-  font-size: 22px;
-  margin: 28px 0 14px;
-  letter-spacing: 1px;
-  text-shadow: 0 0 6px rgba(0,0,0,0.7);
-}
 
 /* Listy */
 #section_12 ul {
@@ -1068,31 +932,6 @@ table.rangi {
   text-shadow: 0 0 4px rgba(0,0,0,0.6);
 }
 
-/* Ozdobna ikona przed każdym punktem 
-#section_12 ul li::before {
-  content: "➤"; 
-  position: absolute;
-  left: 25%;
-  color: #E6C200; 
-  font-size: 14px;
-  text-shadow: 0 0 6px rgba(230,194,0,0.7);
-}*/
-
-
-.warning {
-  font-family: 'Lora', serif;
-  font-size: 15px;
-  font-weight: bold;
-  color: #ff4444;
-  text-align: center;
-  margin: 20px auto;
-  padding: 12px 18px;
-  border: 2px solid #ff4444;
-  border-radius: 10px;
-  background: rgba(255, 0, 0, 0.05);
-  text-shadow: 0 0 6px rgba(0,0,0,0.8), 0 0 10px rgba(255,0,0,0.5);
-  display: inline-block;
-}
 
 .items {
   width: 100%;
@@ -1154,75 +993,6 @@ table.rangi {
 
 }
 
-.czytanie {
-  width: 100%;
-  max-width: 1000px;
-  margin: 30px auto;
-  border-collapse: collapse;
-  font-size: 15px;
-  color: #E6E6E6;
-  text-align: center;
-  text-shadow: 0 0 4px rgba(0,0,0,0.6);
-}
-
-.czytanie thead th {
-  background: rgba(230,194,0,0.15);
-  color: #E6C200;
-  font-family: 'Lora';
-  font-size: 16px;
-  padding: 12px 8px;
-  border: 1px solid rgba(255,255,255,0.1);
-}
-
-.czytanie td {
-  padding: 10px 8px;
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(255,255,255,0.03);
-  vertical-align: middle;
-}
-
-.czytanie td img {
-  width: 22px;
-  height: 22px;
-  vertical-align: middle;
-  margin-right: 6px;
-}
-
-.table-wrapper{max-width:100%; overflow-x:auto;}
-.czytanie{
-  width:100%;
-  border-collapse:collapse;
-  table-layout:fixed;
-  word-wrap:break-word;
-}
-.czytanie th,.czytanie td{padding:10px 8px;}
-.czytanie td img{width:22px;height:22px;vertical-align:middle;margin-right:6px;}
-
-
-@media (max-width: 768px){
-  .table-wrapper{overflow:visible;}         
-  .czytanie{display:block;}
-  .czytanie thead{display:none;}
-  .czytanie tbody{display:block;}
-  .czytanie tr{display:block; margin:14px 0; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.08); border-radius:10px; box-shadow:0 6px 14px rgba(0,0,0,.35);}
-  .czytanie td{
-    display:flex; align-items:center; gap:10px;
-    padding:10px 12px; border:0; border-bottom:1px solid rgba(255,255,255,.08);
-  }
-  .czytanie tr td:last-child{border-bottom:0;}
-  .czytanie td img{width:20px;height:20px;margin-right:6px;}
-
-  .czytanie td:nth-child(1)::before{content:"Przedmiot"; color:#E6C200; font-weight:700; margin-right:auto;}
-  .czytanie td:nth-child(2)::before{content:"Poziom"; color:#E6C200; font-weight:700; margin-right:auto;}
-  .czytanie td:nth-child(3)::before{content:"Ilość pomyślnie przeczytanych"; color:#E6C200; font-weight:700; margin-right:auto;}
-  .czytanie td:nth-child(4)::before{content:"Szansa"; color:#E6C200; font-weight:700; margin-right:auto;}
-  .czytanie td:nth-child(5)::before{content:"Szansa z Radą"; color:#E6C200; font-weight:700; margin-right:auto;}
-  .czytanie td:nth-child(6)::before{content:"Cooldown"; color:#E6C200; font-weight:700; margin-right:auto;}
-  .czytanie td:nth-child(7)::before{content:"Zwój Egzorcyzmu"; color:#E6C200; font-weight:700; margin-right:auto;}
-
-  .czytanie td{justify-content:space-between;}
-}
-
 
 .opis-tabela {
   font-size: 15px;
@@ -1230,65 +1000,6 @@ table.rangi {
   color: #DDD;
   text-shadow: 0 0 4px rgba(0,0,0,0.6);
 }
-
-.bonusy-um{
-  width: 100%;
-  max-width: 920px;
-  margin: 18px auto;
-  border-collapse: separate;
-  border-spacing: 0 12px;              
-  font-size: 15px;
-  color:#e6e6e6;
-  text-align:center;
-  table-layout: fixed;
-}
-
-.bonusy-um thead th{
-  background:#2a2118;                  
-  border:1px solid #644f36;
-  border-bottom-color:#8a6a45;
-  padding:10px 8px;
-  vertical-align:bottom;
-}
-
-.bonusy-um thead span{
-  display:block;
-  font-weight:700;
-  color:#ffdca0;                      
-  text-shadow:0 0 6px rgba(0,0,0,.8);
-  line-height:1.2;
-}
-
-
-.bonusy-um tbody th.tier,
-.bonusy-um tbody td{
-  background:#e9d2a2;                 
-  color:#2b241a;
-  border:1px solid #c3a875;
-  padding:12px 10px;
-}
-.bonusy-um tbody th.tier{
-  width:80px;
-  font-family:'Lora', serif;
-  font-size:16px;
-  background:#ead7b3;
-}
-
-
-.bonusy-um tbody tr > *:first-child{ border-radius:8px 0 0 8px; }
-.bonusy-um tbody tr > *:last-child { border-radius:0 8px 8px 0; }
-
-.bonusy-um tbody tr{
-  box-shadow:0 6px 12px rgba(0,0,0,.25);
-}
-
-
-.bonusy-um th, .bonusy-um td{ word-wrap:break-word; }
-
-@media (max-width: 720px){
-  .bonusy-um{ display:block; overflow-x:auto; }
-}
-
 
 .dungeon-info {
   list-style: none;
@@ -1345,20 +1056,6 @@ table.rangi {
 .boss-info li span {
   color: #A9D2FF; 
   font-style: italic;
-}
-
-.reward-text {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #E6E6E6;
-  text-align: center;
-  text-shadow: 0 0 6px rgba(0,0,0,0.7);
-  margin: 20px auto;
-}
-
-.reward-text strong {
-  color: #E6C200;
-  font-weight: bold;
 }
 
 .bonus-box {
@@ -1421,31 +1118,6 @@ table.rangi {
   text-shadow: 0 0 8px rgba(0,0,0,0.8);
 }
 
-.marriage-req {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto 20px;
-  border-collapse: collapse;
-  font-size: 15px;
-  text-align: left;
-  color: #E6E6E6;
-  text-shadow: 0 0 4px rgba(0,0,0,0.7);
-}
-
-.marriage-req thead th {
-  background: rgba(230,194,0,0.15);
-  color: #E6C200;
-  padding: 10px;
-  border: 1px solid rgba(230,194,0,0.3);
-  text-align: center;
-}
-
-.marriage-req td {
-  background: rgba(255,255,255,0.03);
-  padding: 10px;
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
 .marriage-note {
   max-width: 700px;
   margin: 15px auto 30px;
@@ -1482,69 +1154,15 @@ table.rangi {
 }
 
 
-.exchange-table {
-  width: 100%;
-  max-width: 600px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  text-align: center;
-  font-size: 15px;
-  color: #E6E6E6;
-  text-shadow: 0 0 5px rgba(0,0,0,0.6);
-}
-
-.exchange-table td {
-  padding: 8px 12px;
-}
-
-.exchange-table .arrow i {
-  color: #E6C200;
-  font-size: 18px;
-  text-shadow: 0 0 6px rgba(230,194,0,.7);
-}
-
-
-.exchange-table img {
-  width: 34px;         
-  height: 34px;
-  vertical-align: middle; 
-  margin-left: 6px;    
-  margin-right: 6px;
-}
-
-
-/* Cała sekcja */
-#section_22{
-  text-align:center;
-  max-width: 980px;
-  margin: 0 auto;
-}
-
-/* Podtytuły: CRAFTING / DOSKONALENIE… 
-#section_22 .req-title{
-  font-family:'Cinzel Decorative', serif;
-  color:#E6C200;
-  font-size:22px;
-  letter-spacing:1px;
-  margin: 14px 0 10px;
-  text-transform: uppercase;
-  text-shadow: 0 0 8px rgba(0,0,0,.85), 0 0 10px rgba(230,194,0,.45);
-}*/
-
-/* Akapity w sekcji */
-
-
-/* Pasek z ikonkami broni 75lvl */
 #section_22 .itemy75{
-  margin: 25px auto;
   display:flex;
-  gap: 5px;
   justify-content:center;
   align-items:center;
-  padding: 8px 0 2px;
+  gap: 14px;
+  padding: 10px 6px 2px;
+
 }
 #section_22 .itemy75 img{
-  width: 64px; height: 64px; object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(0,0,0,.6));
   transition: transform .15s ease, filter .15s ease;
 }
@@ -1572,13 +1190,7 @@ table.rangi {
 }
 
 
-img[alt="kowal"] {
-  display: block;
-  margin: 6px auto 6px;
-  filter: drop-shadow(0 14px 24px rgba(0,0,0,.8));
-}
-
-
+/* JS - WYTWARZANIE KD */
 .inv-window.inv--sm{
   max-width: 420px;      
   margin: 15px auto;
@@ -1595,7 +1207,6 @@ img[alt="kowal"] {
   font-size: 24px;
 }
 
-/* siatka slotów – 6 w wierszu, mniejsze */
 .inv-slots{
   display:grid;
   grid-template-columns: repeat(6, minmax(48px,1fr));
@@ -1665,8 +1276,17 @@ img[alt="kowal"] {
   }
   .inv-mini-yang img{ width:18px; height:18px; object-fit:contain; }
 
-  
+/* END */
 
+p strong{
+  color: #E6C200;
+  font-weight: bold;
+}
+
+p span{
+  color: #A9D2FF;  
+  font-weight: bold;
+}
 
 .paragraf{
   max-width: 700px;
@@ -1917,14 +1537,6 @@ img[alt="kowal"] {
 
 @media (max-width:720px){
   .biolog .reward .choice{ padding: 9px 10px; }
-}
-
-.short-desc {
-  display:block;
-  font-weight:700;
-  color:#ffdca0;                      
-  text-shadow:0 0 6px rgba(0,0,0,.8);
-  line-height:1.6;
 }
 
 
@@ -2234,11 +1846,6 @@ img[alt="kowal"] {
   transition: transform .2s ease;
 }
 
-.Zbroje{
-  width: 360px;
-  height: 90px;
-}
-
 
 #section_16 .item-slot img:hover {
   transform: scale(1.1);
@@ -2323,7 +1930,7 @@ img[alt="kowal"] {
 }
 
 .arrow {
-  font-size: 40px;
+  font-size: 15px;
   color: #E6C200;
   text-shadow: 0 0 8px rgba(0,0,0,0.6);
 }
@@ -2351,19 +1958,7 @@ img[alt="kowal"] {
 }
 
 
-.obok {
-  display: flex;       
-  gap: 40px;           
-  justify-content: center; 
-  align-items: flex-start; 
-}
 
-.box {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  text-align: center;
-}
 
 .req-title {
   margin-bottom: 10px;
@@ -2454,3 +2049,64 @@ img[alt="kowal"] {
   margin: 8px auto;
   display: block;
 }
+
+
+.upgrade{
+  margin-top: 50px;
+}
+
+
+.stats{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:12px;
+  margin: 22px 0 16px;
+}
+.stat{
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:12px;
+  padding:12px 10px;
+  text-align:center;
+  background:rgba(255,255,255,.02);
+}
+.stat b{
+  display:block;
+  font-size:22px;
+  color:#fff6d8;
+  margin-bottom:4px;
+  font-family:"Flora";
+}
+.stat span{ color:var(--muted); font-size:13px; }
+
+#section_20 .drop-table{
+  text-align: left;
+  font-size: 13px;
+}
+
+#section_20 .drop-table td{
+  border: none;
+}
+
+
+#section_13 .table-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+a {
+  color: var(--gold-soft);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
