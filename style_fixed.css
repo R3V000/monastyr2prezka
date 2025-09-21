@@ -1608,9 +1608,9 @@ p span{
 }
 
 .faq-answer {
-  color: #E6E6E6;
+  color: #DDD;
   font-size: 15px;
-  line-height: 1.7;
+  line-height: 1.5;
   text-shadow: 0 0 4px rgba(0,0,0,.7);
   margin: 0;
   padding-left: 4px;
@@ -1928,6 +1928,10 @@ p span{
   border-radius: 8px;
   padding: 4px;
   background: rgba(0,0,0,0.4);
+}
+
+#section_24 .arrow {
+  font-size: 24px;
 }
 
 .arrow {
