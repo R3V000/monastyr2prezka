@@ -2104,36 +2104,130 @@ a {
 }
 
 
+#section_37 .socials{
+  width: auto;
+}
 
-.video-wrapper {
+
+
+
+.sety-wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(var(--cols, 3), minmax(100px, 1fr));
+  justify-content: center;   
+}
+
+.sety-wrapper div {
   position: relative;
   display: inline-block;
-  width: 576px; /* szerokość dopasowana do ramki */
-  height: 290px; /* wysokość dopasowana do ramki */
 }
 
-.video-wrapper video {
-  width: 90%;
-  height: 90%;
-  display: block;
-
-}
-
-.video-wrapper .frame {
+.sety-wrapper div .tooltip {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;   /* ramka nachodzi dokładnie na film */
-  height: 100%;
-  pointer-events: none; /* żeby kliknięcia przechodziły do odtwarzacza */
+  bottom: 110%; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+
+  background: #0b0b0b;          
+  border: 1px solid rgba(230,194,0,0.45);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #E6E6E6;
+  font-size: 14px;
+  line-height: 1.4;
+  text-shadow: 0 0 4px rgba(0,0,0,.7);
+  box-shadow: 0 8px 20px rgba(0,0,0,.65),
+              0 0 12px rgba(230,194,0,.25) inset;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease, transform .2s ease;
+  z-index: 10;
+}
+
+.sety-wrapper div .tooltip h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6C200;
+  text-align: center;
+}
+
+.sety-wrapper div .tooltip ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.sety-wrapper div .tooltip li {
+  font-size: 13px;
+  margin: 2px 0;
 }
 
 
+.sety-wrapper div:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
 
 
+.img-hover-info {
+  position: relative;
+  display: inline-block;
+}
 
+.img-hover-info img {
+  display: block;
+  max-width: 100%;
+}
 
+/* overlay z opisem */
+.img-hover-info .info {
+  position: absolute;
+  top: 0; left: 0;
+  background: #0b0b0b;          
+  border: 1px solid rgba(230,194,0,0.45);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #E6E6E6;
+  font-size: 14px;
+  line-height: 1.4;
+  text-shadow: 0 0 4px rgba(0,0,0,.7);
+  box-shadow: 0 8px 20px rgba(0,0,0,.65),
+              0 0 12px rgba(230,194,0,.25) inset;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* żeby hover działał tylko na całości */
+  font-size: 14px;
+  overflow-y: auto; /* gdyby opis był długi */
 
+  z-index: 999;
+}
 
+.img-hover-info:hover .info {
+  opacity: 1;
+}
 
+.img-hover-info h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6C200;
+  text-align: center;
+}
+
+.img-hover-info ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.img-hover-info li {
+  font-size: 13px;
+  margin: 2px 0;
+}
 
