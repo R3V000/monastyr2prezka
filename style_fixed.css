@@ -1005,15 +1005,17 @@ h1::after {
 .dungeon-info {
   list-style: none;
   padding: 0;
-  margin: 20px auto;
-  max-width: 400px;
+  margin: 10px auto;
+  margin-bottom: 50px;
+  max-width: 350px;
   text-align: center;
 }
+
 
 .dungeon-info li {
   margin: 8px 0;
   padding: 8px 12px;
-  font-size: 15px;
+  font-size: 13px;
   color: #E6E6E6;
   text-shadow: 0 0 4px rgba(0,0,0,0.6);
   background: rgba(255,255,255,0.03);
@@ -1292,10 +1294,10 @@ p span{
 .paragraf{
   max-width: 700px;
   margin: 10px auto;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 14px;
+  line-height: 1.6;
   text-align: center;
-  color: #E6E6E6;
+  color: #DDD;
   text-shadow: 0 0 6px rgba(0,0,0,0.7);
 }
 
@@ -2230,4 +2232,6 @@ a {
   font-size: 13px;
   margin: 2px 0;
 }
+
+
 
