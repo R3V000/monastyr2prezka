@@ -304,3 +304,41 @@ setInterval(() => {
   indexCraft = (indexCraft + 1) % craftImages.length;
   craftImg.src = craftImages[indexCraft];
 }, 1000);
+
+  (function(){
+    const buttons = document.querySelectorAll('.package-card');
+    const details = document.querySelectorAll('.package-detail');
+
+    function showPackage(id){
+      details.forEach(d => {
+        const isTarget = d.id === id;
+        d.classList.toggle('is-visible', isTarget);
+        d.toggleAttribute('hidden', !isTarget);
+      });
+      buttons.forEach(b => {
+        const active = b.getAttribute('data-target') === id;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-expanded', active ? 'true' : 'false');
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-target');
+        const targetEl = document.getElementById(id);
+        // toggle: kliknięcie w aktywny chowa, w inny – pokazuje
+        const willShow = !(targetEl && targetEl.classList.contains('is-visible'));
+        details.forEach(d => { d.classList.remove('is-visible'); d.hidden = true; });
+        buttons.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-expanded','false'); });
+
+        if(willShow){
+          targetEl.hidden = false;
+          requestAnimationFrame(() => {
+            targetEl.classList.add('is-visible');
+            btn.classList.add('is-active');
+            btn.setAttribute('aria-expanded','true');
+          });
+        }
+      });
+    });
+  })();
